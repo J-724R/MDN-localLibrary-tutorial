@@ -8,7 +8,7 @@
     "build": "npx tsc -w",
     "startdev": "npx tsc -w & nodemon dist/index.js",
     "devstart": "nodemon ./bin/www",
-    "serverstart": "DEBUG=Server:* npm run devstart"
+    "serverstart": "DEBUG=MDN:* npm run devstart"
   },
   "dependencies": {
     "async": "^3.2.4",

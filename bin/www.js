@@ -5,7 +5,7 @@
  */
 
 const app = require('../app');
-const debug = require('debug')('server2:server');
+const debug = require('debug')('express-locallibrary-tutorial:server');
 const http = require('http');
 
 /**
@@ -34,7 +34,7 @@ server.on('listening', onListening);
  */
 
 function normalizePort(val) {
-  const port = parseInt(val, 10);
+  let port = parseInt(val, 10);
 
   if (isNaN(port)) {
     // named pipe
@@ -58,7 +58,7 @@ function onError(error) {
     throw error;
   }
 
-  const bind = typeof port === 'string'
+  let bind = typeof port === 'string'
     ? 'Pipe ' + port
     : 'Port ' + port;
 
